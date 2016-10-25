@@ -1,0 +1,9 @@
+;plaque grille
+;size:x=0.3mm,y=70.0mm,z=70.0mm
+
+
+fill 
+{
+    within{box3d(0.0,0.0,0.0,0.3,70.0,70.0)}
+    notin{box3d(0.0,34.5,14.5,0.3,68.5,55.5)} ; hole size: 41mm x 34mm at y0=34.5 mm x z0=14.5 mm
+}

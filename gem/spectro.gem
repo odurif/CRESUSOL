@@ -1,6 +1,5 @@
 ; Spectro
 
-; TODO: include mass
 ; TODO: add grid in plate_grill
 
 ;-------------------------------------------------------;
@@ -15,6 +14,7 @@
 
 Pa_define($((21*ds+0.3)*10+1),701,701,p,non-mirrored)
 
+;--- plates ---
 locate(0,0,0,10)
 {
     locate($(0*ds)){e(1){include(include/plate_grill.gem)}}

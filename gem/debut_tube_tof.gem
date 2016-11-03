@@ -1,0 +1,37 @@
+; Debut tube TOF
+
+; TODO: trous+grilles
+
+Pa_define(303,71,71,p,non-mirrored)
+
+locate(0,0,0,1)
+{
+    e(1)
+    {
+        ; partie avec les plaques deviatrices 30x65x70mm
+        fill 
+        {
+            within{box3d(0.0,0.0,0.0,30.0,65.0,70.0)}
+            notin{box3d(0.0,5.0,5.0,30.0,64.0,65.0)}
+            
+            ; on enleve ce petit morceau au dessus de la plaque charge (decale de 2mm)
+            notin{box3d(0.0,64.0,5.0,2.0,65.0,65.0)}
+            
+        }
+        
+        ; tube de 271x70x70 mm avec des bords de 5,5,5 et 2 mm
+        fill 
+        {
+            within{box3d(30.0,0.0,0.0,302.0,70.0,70.0)}
+            notin{box3d(30.0,5.0,5.0,302.0,68.0,65.0)}
+        }
+    }
+    
+    e(2) ; plaque deviatrice
+    {
+        fill
+        {
+            within{box3d(3.0,7.0,7.0,30.0,8.0,63.0)}
+        }
+    }
+}

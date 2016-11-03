@@ -1,0 +1,41 @@
+; Spectro
+
+; TODO: add grid in plate_grill
+
+;-------------------------------------------------------;
+;---------------- variables ajustables -----------------;
+;-------------------------------------------------------;
+
+
+;-------------------------------------------------------;
+;-------------- definition de la geometrie -------------;
+;-------------------------------------------------------;
+
+Pa_define(22.3,71,71,p,non-mirrored)
+
+;--- plates ---
+locate(0,0,0,10)
+{
+    locate(0){e(1){include(include/plate_grill.gem)}}
+    locate(1){e(2){include(include/plate_hollow.gem)}}
+    locate(2){e(3){include(include/plate_hollow.gem)}}
+    locate(3){e(4){include(include/plate_hollow.gem)}}
+    locate(4){e(5){include(include/plate_hollow.gem)}}
+    locate(5){e(6){include(include/plate_hollow.gem)}}
+    locate(6){e(7){include(include/plate_hollow.gem)}}
+    locate(7){e(8){include(include/plate_half.gem)}}
+    locate(8){e(9){include(include/plate_grill.gem)}}
+    locate(9){e(10){include(include/plate_hollow.gem)}}
+    locate(10){e(11){include(include/plate_hollow.gem)}}
+    locate(11){e(12){include(include/plate_hollow.gem)}}
+    locate(12){e(13){include(include/plate_hollow.gem)}}
+    locate(13){e(14){include(include/plate_hollow.gem)}}
+    locate(14){e(15){include(include/plate_hollow.gem)}}
+    locate(15){e(16){include(include/plate_hollow.gem)}}
+    locate(16){e(17){include(include/plate_hollow.gem)}}
+    locate(17){e(18){include(include/plate_hollow.gem)}}
+    locate(18){e(19){include(include/plate_hollow.gem)}}
+    locate(19){e(20){include(include/plate_hollow.gem)}}
+    locate(20){e(21){include(include/plate_hollow.gem)}}
+    locate(21){e(22){include(include/plate_grill.gem)}}
+}

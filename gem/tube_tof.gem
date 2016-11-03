@@ -1,0 +1,26 @@
+; Tube du spectro
+
+; TODO : - trous + grilles ??
+;        - revoir les dimensions
+
+#local dn = 2 -- scale size
+#local L = 1500 -- Tube length
+#local R = 50 -- Tube radius (mesure a l exterieur)
+#local r = 40 -- Tube inside radius (mesure a l interieur)
+
+Pa_define($(L*dn+1),$(2*R*dn+1),$(2*R*dn+1),p,non-mirrored)
+
+locate(0,$(R*dn),$(R*dn),$(dn))
+{
+
+    e(0) ;tube exterieur neutre de 2mm d epaisseur et de 100 mm de diametre
+    {
+        Rotate_Fill(360){within{box(0,$(R-2),$(L),$(R))}}
+    }
+    
+    e(1) ; tube de temps de vol libre à l interieur : 80mm de diametre, 2mm d epaisseur
+    {
+        Rotate_Fill(360) {within{box(0,$(r),$(L),$(r+2))}}
+    }  
+    
+}

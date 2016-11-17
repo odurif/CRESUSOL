@@ -1,5 +1,7 @@
-;tube_tof
-;section du tube de tof avec grille
+; Tube du spectro
+
+; TODO : - trous + grilles ??
+;        - revoir les dimensions
 
 
 Pa_define(3001,201,201,p,non-mirrored)

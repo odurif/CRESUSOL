@@ -1,0 +1,32 @@
+; Grill for plate_grill 
+; grill size : 0.02mm x 34.22mm x 41.06mm 
+; mesh : (20/340)um
+
+;-------------------------------------------------------;
+;---------------- variables ajustables -----------------;
+;-------------------------------------------------------;
+
+# local ds = 0.02  -- taille d'une maille SIMION comme taille d une fibre (en mm)
+# local dS = 0.34 -- espacement de la grille (en mm)
+# local x = 0.02 -- epaisseur de la grille (en mm)
+# local y = 34.22 -- largeur de la grille (en mm)
+# local z = 41.06 -- hauteur de la grille (en mm)
+# local ni = y/(ds+dS) -- nombre de fibres horizontale
+# local nj = z/(ds+dS) -- nombre de fibres verticale
+# local r = dS/ds+1 -- le ratio (taille fibre) / (taille espacement)
+
+;-------------------------------------------------------;
+;-------------- definition de la geometrie -------------;
+;-------------------------------------------------------;
+
+Pa_define(3,$(y/ds+1),$(z/ds+1),p,non-mirrored)
+
+; les fibres horizontales
+#for i=0,ni do
+    locate(0,$(i*r),0,$(1/ds)){e(1){fill{within{box3d(0.0,0.0,0.0,$(ds),$(ds),$(z))}}}}
+#end
+
+; les fibres verticales
+#for j=0,nj do
+    locate(0,0,$(j*r),$(1/ds)){e(1){fill{within{box3d(0.0,0.0,0.0,$(ds),$(y),$(ds))}}}}
+#end

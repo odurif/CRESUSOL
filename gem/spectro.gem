@@ -17,7 +17,7 @@ Pa_define($((21*ds+0.3)*10+1),701,701,p,non-mirrored)
 ;--- plates ---
 locate(0,0,0,10)
 {
-    locate($(0*ds)){e(1){include(include/plate_grill.gem)}}
+    locate($(0*ds)){e(1){include(include/plate_grid.gem)}}
     locate($(1*ds)){e(2){include(include/plate_hollow.gem)}}
     locate($(2*ds)){e(3){include(include/plate_hollow.gem)}}
     locate($(3*ds)){e(4){include(include/plate_hollow.gem)}}
@@ -25,7 +25,7 @@ locate(0,0,0,10)
     locate($(5*ds)){e(6){include(include/plate_hollow.gem)}}
     locate($(6*ds)){e(7){include(include/plate_hollow.gem)}}
     locate($(7*ds)){e(8){include(include/plate_half.gem)}}
-    locate($(8*ds)){e(9){include(include/plate_grill.gem)}}
+    locate($(8*ds)){e(9){include(include/plate_grid.gem)}}
     locate($(9*ds)){e(10){include(include/plate_hollow.gem)}}
     locate($(10*ds)){e(11){include(include/plate_hollow.gem)}}
     locate($(11*ds)){e(12){include(include/plate_hollow.gem)}}
@@ -38,5 +38,5 @@ locate(0,0,0,10)
     locate($(18*ds)){e(19){include(include/plate_hollow.gem)}}
     locate($(19*ds)){e(20){include(include/plate_hollow.gem)}}
     locate($(20*ds)){e(21){include(include/plate_hollow.gem)}}
-    locate($(21*ds)){e(22){include(include/plate_grill.gem)}}
+    locate($(21*ds)){e(22){include(include/plate_grid.gem)}}
 }

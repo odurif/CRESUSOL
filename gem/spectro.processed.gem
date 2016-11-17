@@ -11,7 +11,7 @@
 ;-------------- definition de la geometrie -------------;
 ;-------------------------------------------------------;
 
-Pa_define(22.3,71,71,p,non-mirrored)
+Pa_define(214,701,701,p,non-mirrored)
 
 ;--- plates ---
 locate(0,0,0,10)
